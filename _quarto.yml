@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  sidebar:
+    title: "OHI Methods (2024)"
+    logo: media/OHI-logo.png
+    logo-alt: "This is alt text for my logo"
+    style: "docked"
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+      - regions.qmd
+      - section: Models
+        contents: 
+          - index-scores.qmd
+          - goal-scores.qmd
+          - section: Likely Future Status Dimensions
+            contents: 
+              - trend.qmd
+              - pressure.qmd
+              - resilience.qmd
+      - references.qmd
+      - href: https://oceanhealthindex.org/
+        text: Check out OHI!
+        target: _blank
+  page-footer: 
+    left: Learn more about the [Ocean Health Index](https://oceanhealthindex.org/){target=_blank}
+    right: Source code available on [{{< fa github brands title="The GitHub octocat icon" >}} Github](https://github.com/dustin-duncan/website_creation){target=_blank}
+
+# {{< fa github brands title="The GitHub octocat icon" >}} # fa: "we're using fontawesomes library", then github: 'this is github icon'
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    page-layout: full
+
+
+
